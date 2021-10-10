@@ -10,41 +10,41 @@ function lightMenuItem (num: number) {
     led.plot(num % 5, num / 5)
 }
 function showImage (num: number) {
-    music.stopAllSounds()
+    music.stopMelody(MelodyStopOptions.All)
     if (num == 0) {
         basic.showIcon(IconNames.Giraffe)
-        soundExpression.giggle.play()
+        music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
     }
     if (num == 1) {
         basic.showIcon(IconNames.Tortoise)
-        soundExpression.mysterious.play()
+        music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
     }
     if (num == 2) {
         basic.showIcon(IconNames.Angry)
-        soundExpression.hello.play()
+        music.startMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once)
     }
     if (num == 3) {
         basic.showIcon(IconNames.Happy)
-        soundExpression.happy.play()
+        music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
     }
     if (num == 4) {
         basic.showIcon(IconNames.Sad)
-        soundExpression.sad.play()
+        music.startMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once)
     }
     if (num == 5) {
         basic.showIcon(IconNames.Umbrella)
-        soundExpression.slide.play()
+        music.startMelody(music.builtInMelody(Melodies.Funk), MelodyOptions.Once)
     }
     if (num == 6) {
         basic.showIcon(IconNames.StickFigure)
-        soundExpression.soaring.play()
+        music.startMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once)
     }
     if (num == 7) {
         basic.showIcon(IconNames.Duck)
-        soundExpression.spring.play()
+        music.startMelody(music.builtInMelody(Melodies.Baddy), MelodyOptions.Once)
     }
     if (num == 8) {
-        soundExpression.twinkle.play()
+        music.startMelody(music.builtInMelody(Melodies.Wawawawaa), MelodyOptions.Once)
         for (let index = 0; index < 4; index++) {
             basic.showIcon(IconNames.Diamond)
             basic.pause(250)
@@ -56,7 +56,7 @@ function showImage (num: number) {
     }
     if (num == 9) {
         basic.showIcon(IconNames.EigthNote)
-        soundExpression.yawn.play()
+        music.startMelody(music.builtInMelody(Melodies.JumpDown), MelodyOptions.Once)
     }
     if (num == 10) {
         basic.showIcon(IconNames.Snake)
@@ -72,7 +72,7 @@ function showImage (num: number) {
     }
     if (num >= 13) {
         basic.showIcon(IconNames.House)
-        soundExpression.sad.play()
+        music.startMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once)
         basic.pause(250)
         currentMenuItem = 0
         showImage(currentMenuItem)
